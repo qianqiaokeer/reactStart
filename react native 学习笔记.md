@@ -50,6 +50,7 @@
    ````sh
    npx react-native run-android
    ````
++ Android 模拟器
 
 
 
