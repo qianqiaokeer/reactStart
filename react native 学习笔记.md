@@ -65,7 +65,37 @@
 
 
 
+# 问题
+> 网速太慢了
 
++ 换淘宝镜像
+   ````sh
+   yarn config set registry https://registry.npm.taobao.org
+   npm config set registry https://registry.npm.taobao.org
+   ````
++ 移除原代理
+
+   ````sh
+   yarn config delete proxy
+   npm config rm proxy
+   ````
++ 查看配置信息
+
+   ````sh
+   yarn config list
+   ````
+> 依赖包冲突
+   ````sh
+   this command with --force, or --legacy-peer-deps
+   Fix the upstream dependency conflict, or retry
+   this command with --force, or --legacy-peer-deps
+   to accept an incorrect (and potentially broken) dependency resolution.
+   ````
++ 解决方案
+
+   ````sh
+   npm install --–legacy-peer-deps
+   ````
 # 非管理员安装MySQL
 > 下载zip
 
@@ -110,3 +140,30 @@ alter user 'root'@'localhost' identified with mysql_native_password by '123456';
 ````
 
 
+````sh
+info yarn config
+{
+  'version-tag-prefix': 'v',
+  'version-git-tag': true,
+  'version-commit-hooks': true,
+  'version-git-sign': false,
+  'version-git-message': 'v%s',
+  'init-version': '1.0.0',
+  'init-license': 'MIT',
+  'save-prefix': '^',
+  'bin-links': true,
+  'ignore-scripts': false,
+  'ignore-optional': false,
+  registry: 'https://registry.yarnpkg.com',
+  'strict-ssl': true,
+  'user-agent': 'yarn/1.22.19 npm/? node/v15.5.1 win32 x64'
+}
+info npm config
+{
+  registry: 'http://registry.npmjs.org/',
+  home: 'https://npm.taobao.org',
+  prefix: 'C:\\Users\\kehuiz\\Myfolder\\node-v16.15.1-win-x64\\node_global',
+  cache: 'C:\\Users\\kehuiz\\Myfolder\\node-v16.15.1-win-x64\\node_cache',
+  proxy: 'http://165.225.216.25:10077/'
+}
+````
