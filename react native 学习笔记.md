@@ -7,7 +7,7 @@
 
    版本至少11
 + Yarn
-   
+  
    用于替代npm 提升速度
    ````sh
    npm install -g yarn
@@ -28,16 +28,43 @@
 ## 项目创建
 + 使用react-native-cli创建项目
 
-   老版本卸载 避免一些冲突
+   > 老版本卸载 避免一些冲突
+   
    ````sh
    npm uninstall -g react-native-cli
+   npm install -g react-native-cli
    ````
    > 初始化项目
-
+   
    ````sh
    npx react-native init xxxx
    ````
    xxxx大哥这里表示项目目录
+
++ 使用create-react-native-app初始化项目
+
+  > 先下载create-react-native-app工具
+
+  ````sh
+  npm install -g create-react-native-app
+  ````
+
+  > 初始化项目
+
+  ````sh
+  create-react-native-app projectName
+  cd projectName
+  npm install -g expo-cli
+  ````
+
+  > 启动项目
+
+  ````sh
+  #指定手机连接下载IP地址
+  set REACT_NATIVE_PACKAGER_HOSTNAME=192.168.xxx.xxx
+  expo start
+  ````
+
 ## 使用Android设备
 +  在Android真机设备上运行应用
    > 开启USB调试 打开usb调试开关
