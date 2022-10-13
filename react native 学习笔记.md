@@ -79,6 +79,24 @@
    ````
 + Android 模拟器
 
+## 页面导航
+
+> 第三方插件
+
+````sh
+yarn add react-navigation
+#导航
+yarn add react-navigation-stack
+#底部导航
+yarn add react-navigation-tabs
+yarn add react-native-screens
+yarn add react-native-reanimated 
+yarn add react-native-gesture-handler
+
+yarn add @react-navigation/native
+yarn add @react-navigation/native-stack
+yarn add @react-navigation/bottom-tabs
+````
 
 
 
@@ -88,6 +106,29 @@
 
 
 
+
+
+nodejs更新很快  搭建项目使用的依赖包版本对nodejs的版本有要求 	nodejs版本低了会发生错误
+
+所以需要去更新nodejs的版本	
+
+可以使用nvm来管理nodejs	可以下载不同版本的nodejs	使用什么版本就切换到什么版本
+
+下载nvm
+
+安装
+
+查看是否安装成功
+
+````sh
+nvm version
+#查看可用的nodjs版本
+nvm ls available
+#下载需要的nodejs版本
+nvm install xx.xx.x
+#使用指定nodejs版本
+nvm use xx.xx.x
+````
 
 
 
