@@ -216,6 +216,10 @@ alter user 'root'@'%' identified with mysql_native_password by '123456';
 flush privileges;
 --ip 指定 可能有多个mysql
 mysql -u root -h 192.168.194.142 -p
+-- mysql8给用户eladmin赋权
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, INDEX, 
+ALTER,CREATE VIEW, SHOW VIEW,  EVENT, TRIGGER, CREATE TABLESPACE
+ON *.* TO `eladmin`@`%` ;
 ````
 
 
