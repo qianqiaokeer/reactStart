@@ -159,11 +159,19 @@ default-character-set=utf8
 > 不是管理员不能install 服务 所以每次使用是去启动MySQL 执行如下代码
 
 ````sh
+# 启动数据库
 mysqld --console
+````
+
+````sh
+# 修改密码
+mysqld --console --skip-grant-tables --shared-memory
 ````
 > 修改密码
 ````sql
+flush privileges;
 alter user 'root'@'localhost' identified with mysql_native_password by '123456';
+flush privileges;
 ````
 
 
