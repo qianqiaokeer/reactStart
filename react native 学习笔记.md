@@ -210,11 +210,26 @@ default-character-set=utf8
 > 不是管理员不能install 服务 所以每次使用是去启动MySQL 执行如下代码
 
 ````sh
+# 启动数据库
 mysqld --console
+````
+
+````sh
+# 修改密码
+mysqld --console --skip-grant-tables --shared-memory
 ````
 > 修改密码
 ````sql
-alter user 'root'@'localhost' identified with mysql_native_password by '123456';
+update user set host = '%' where host = 'localhost' and user = 'root';
+flush privileges;
+alter user 'root'@'%' identified with mysql_native_password by '123456';
+flush privileges;
+--ip 指定 可能有多个mysql
+mysql -u root -h 192.168.194.142 -p
+-- mysql8给用户eladmin赋权
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, INDEX, 
+ALTER,CREATE VIEW, SHOW VIEW,  EVENT, TRIGGER, CREATE TABLESPACE
+ON *.* TO `eladmin`@`%` ;
 ````
 
 
