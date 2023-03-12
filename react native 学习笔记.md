@@ -98,6 +98,16 @@ yarn add @react-navigation/native-stack
 yarn add @react-navigation/bottom-tabs
 ````
 
+> swiper
+
+````sh
+yarn add react-native-swiper@nighty
+````
+
+> Slider滑杆组件
+
+类似调节音量大小的滑杆
+
 
 
 
@@ -235,3 +245,14 @@ info npm config
   proxy: 'http://165.225.216.25:10077/'
 }
 ````
+
+````sh
+ ERROR  Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+````
+
+详细查找你导入的js文件，定义的字符串或函数名称引用错误
+
+````js
+import Slider from '@react-native-community/slider';
+````
+
